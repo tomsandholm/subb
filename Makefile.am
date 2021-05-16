@@ -1,5 +1,5 @@
 bin_PROGRAMS = subb
-suba_SOURCES = subb.c
+subb_SOURCES = subb.c
 STAG = `git describe | awk -F[-.] '{printf("%s-%d.%d.%d\n",$$1,$$2,$$3,$$4+1);}'`
 
 package:
