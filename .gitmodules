@@ -1,0 +1,3 @@
+[submodule "subbb"]
+	path = subbb
+	url = git@github.com:tomsandholm/subbb.git
