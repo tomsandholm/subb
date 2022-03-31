@@ -19,6 +19,11 @@ pipeline {
     stage('checkout') {
       steps {
         checkout scm
+        sh """
+		  git submodule update --recursive --init
+		  git submodule foreach 'git checkout main'
+		  git submodule foreach 'git pull'
+        """
       }
     }
 
