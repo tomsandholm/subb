@@ -51,7 +51,7 @@ pipeline {
                     sh "make -e STAG=$TAGSTRING stag"
                 } else {
                     echo "##### using built-in tag"
-                    sh 'make stag'
+                    sh "make stag"
                 }
              }
         }
