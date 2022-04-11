@@ -50,7 +50,9 @@ pipeline {
                     echo "##### Tag: $TAGSTRING"
                     sh "make -e STAG=$TAGSTRING stag"
                 } else {
-                    sh 'make stag'
+				    sh """
+                        git describe --always
+				    """
                 }
              }
         }
