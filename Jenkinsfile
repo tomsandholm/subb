@@ -69,7 +69,6 @@ pipeline {
   post {
     always {
       archiveArtifacts artifacts: 'sub*.deb', onlyIfSuccessful: true
-      step([$class: 'WsCleanup'])
     }
   }
 }
