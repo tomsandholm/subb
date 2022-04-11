@@ -7,7 +7,7 @@ package:
 
 stag:
 	@echo "##### stag: $(STAG)"
-	git tag -a '"$(STAG)"' -m 'version upgrade to "$(STAG)"'
+	git tag -a "$(STAG)" -m "version upgrade to $(STAG)"
 
 stagpush:
 	git push --tags
