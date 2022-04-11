@@ -6,7 +6,8 @@ package:
 	sudo checkinstall --install=no --pkgname $(bin_PROGRAMS)
 
 stag:
-	git tag -a "$(STAG)" -m "version upgrade to $(STAG)"
+	@echo "##### stag: $(STAG)"
+	git tag -a '"$(STAG)"' -m 'version upgrade to "$(STAG)"'
 
 stagpush:
 	git push --tags
