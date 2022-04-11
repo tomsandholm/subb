@@ -51,8 +51,7 @@ pipeline {
                     sh "make -e STAG=$TAGSTRING stag"
                 } else {
 				    sh """
-					    git tag
-                        git describe --tags --always --abbrev=0
+					  make stag
 				    """
                 }
              }
