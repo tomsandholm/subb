@@ -10,9 +10,6 @@ stag:
 	echo "##### stag: $(STAG)"
 	git tag -a "$(STAG)" -m "version upgrade to $(STAG)"
 	echo "$(STAG)" > ./last-tag
-	git add last-tag
-	git commit -m "new last-tag value $(STAG)"
-	git push
 
 stagpush:
 	git push --tags
