@@ -12,7 +12,7 @@ stag:
 	echo "$(STAG)" > ./last-tag
 	git add ./last-tag
 	git commit -m "update to $(STAG)"
-	git push
+	git push origin HEAD:main
 
 stagpush:
 	git push --tags
