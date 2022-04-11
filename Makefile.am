@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 bin_PROGRAMS = subb
 subb_SOURCES = subb.c
-STAG = `./bump-tag`
+STAG = $(shell ./bump-tag)
 
 package:
 	sudo checkinstall --install=no --pkgname $(bin_PROGRAMS)
