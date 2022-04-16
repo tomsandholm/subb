@@ -7,12 +7,13 @@ package:
 	sudo checkinstall --install=no --pkgname $(bin_PROGRAMS)
 
 stag:
+	git checkout main
 	echo "##### stag: $(STAG)"
 	git tag -a "$(STAG)" -m "version upgrade to $(STAG)"
 	echo "$(STAG)" > ./last-tag
-	git add ./last-tag
-	git commit -m "update to $(STAG)"
-	git push origin HEAD:main
+	git add last-tag
+	git commit -m "update tags"
+	git push 
 
 stagpush:
 	git push --tags
